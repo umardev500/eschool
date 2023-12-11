@@ -9,6 +9,6 @@ BEGIN
     END IF;
 
     IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'payment_enum') THEN
-        CREATE TYPE payment_status_enum AS ENUM ( 'settlement','pending','expired','failure');
+        CREATE TYPE payment_enum AS ENUM ( 'settlement','pending','expired','failure');
     END IF;
 END $$;
