@@ -9,7 +9,6 @@ import (
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/umardev500/eschool/application"
-	"github.com/umardev500/eschool/config/database"
 )
 
 func init() {
@@ -23,7 +22,6 @@ func init() {
 }
 
 func main() {
-	database.NewPostgres(context.Background())
 	app := application.NewApp()
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt, os.Kill)
 	defer cancel()
