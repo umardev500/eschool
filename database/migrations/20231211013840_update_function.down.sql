@@ -1,0 +1,1 @@
+DROP FUNCTION IF EXISTS update_doc_and_last_update();
